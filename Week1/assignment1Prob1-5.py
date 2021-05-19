@@ -9,8 +9,28 @@ print(fact_ls(28))
 
 #################### Problem 2 #####
 def merge(lst1, lst2):
+    #Solution 1: Using native sorted method
     mergedList = lst1 + lst2
+    print("native solution: ", sorted(mergedList))
     return sorted(mergedList)
+    
+    #Solution 2: Using custom sorting (assuming both lists are sorted)
+    sortedList = []
+    def sortAndMerge(a, b, sortedList = []):
+        if (not(len(a)) or not(len(b))):
+            sortedList += a + b
+        else:
+            if(a[0] < b[0]):
+                sortedList.append(a.pop(0))
+                sortAndMerge(a, b, sortedList)
+            else:
+                sortedList.append(b.pop(0))
+                sortAndMerge(a, b, sortedList)
+
+    sortAndMerge(lst1, lst2, sortedList)
+
+    return sortedList
+
 
 print(merge([1, 3, 5], [2, 4, 6]))
 print(merge([], [2, 4, 6]))
@@ -21,7 +41,6 @@ print(merge([5, 7], [2, 4, 6]))
 
 def split_str(ls):
     vowels = 'a|e|i|o|u|\s+'
-    # strAfterSplit = ls.split(vowels)
     strAfterSplit = re.split(vowels, ls, flags=re.IGNORECASE)
 
     return [s for s in strAfterSplit if s != '']
@@ -85,5 +104,5 @@ def add(f, g):          #Complete statement
 
 print("cmps()", cmps(square, two)(7))
 print("cmps()", cmps(two, square)(2))
-print("skp", skp(add(square, two))()(3))
+print("skp()", skp(add(square, two))()(3))
 
