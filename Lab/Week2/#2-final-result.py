@@ -37,15 +37,17 @@
 
 
 def max_seg(m, t):
-    def getSegments(n, u, s):
-        if (n > 0):
-            return [(n%10**(u-1))*10 + s] + getSegments(n//10, u, s) + getSegments(n//10, u, n%10)
+    def getCombinations(m, t):
+        def getSegments(n, u, s):
+            if (n > 0):
+                return [(n%10**(u-1))*10 + s] + getSegments(n//10, u, s) + getSegments(n//10, u, n%10)
+            else:
+                return [s]
+        if(t >= 1):
+            return (getSegments(m//10, t, m%10) + getCombinations(m, t-1))
         else:
-            return [s]
-    if(t >= 1):
-        return [max(getSegments(m//10, t, m%10) + max_seg(m, t-1))]
-    else:
-        return [0]
+            return [0]
+    return max(getCombinations(m, t))
 
 print(max_seg(1254, 3))  #254
 print(max_seg(1254, 4))  #1254
