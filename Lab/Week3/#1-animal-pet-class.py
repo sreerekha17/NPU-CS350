@@ -110,11 +110,12 @@ print(oreo.name)
 print(oreo.owner)
 oreo.talking()
 print("Oreo's is", oreo.age, " year old")
+print("Fluffy is", "" if oreo.is_alive else " not ",  "alive",)
 
 #creates another cat with name Fluffy who is 11 years old, and has only one yer left
 fluffy = Cat("Fluffy", 2007, 'Lucy', 1)
 fluffy.lose_life()
-print("Fluffy alive", fluffy.is_alive)
+print("Fluffy is", "" if fluffy.is_alive else " not ",  "alive",)
 
 #creates a new child class Bunny from Pet
 class Bunny(Pet):
