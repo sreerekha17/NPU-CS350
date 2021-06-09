@@ -99,6 +99,6 @@ linkedListWithEmptyNode = linked_list()
 print("original Linked list with empty nodes", linkedListWithEmptyNode)
 linkedListWithEmptyNode.append(3)
 linkedListWithEmptyNode.append(None)
-allSevenLinkedList.delete_linkedList_node(None)
+linkedListWithEmptyNode.delete_linkedList_node(None)
 
 print("linked list after removing us", linkedListWithEmptyNode.display())
