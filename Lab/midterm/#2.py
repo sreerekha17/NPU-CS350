@@ -35,31 +35,35 @@ class Node:
 class CircularList:
     def __init__(self, data=None):
         self.head = None
-        self.tail = None
         self.size = 0
 
     def append(self, data):
         node = Node(data)
         if self.head:
-            self.head.next = node
-            self.head = node
+            curr = self.head
+            while curr.next is not self.head:
+              curr = curr.next
+            curr.next = node
         else:
             self.head = node
-            self.tail = node
-        self.head.next = self.tail
+        node.next = self.head
         self.size += 1
     
     def iter(self):
-        current = self.tail
+        current = self.head
         while current:
             val = current.data
             current = current.next
             yield val
+    
     def printItems(self):
-        curr = self.tail
+        curr = self.head
         items = []
         while curr:
           items.append(curr.data)
+          curr = curr.next
+          if(curr == self.head):
+            break
         print(items)
 
     def mov(self):
@@ -91,9 +95,10 @@ ll.append(12)
 ll.append(13)
 ll.printItems()
 
-    
+ll.mov()
 # primeNumber = getPrimeNumberInCL(ll)
 # print(primeNumber)
 
+ll.printItems()
 
 
