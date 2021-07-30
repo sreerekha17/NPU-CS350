@@ -1,3 +1,21 @@
+# Create a program to label unmatched parentheses in an expression from keyboard read-in. 
+# Assuming that the expression consists of only parentheses and upper/lower case English alphabet from A-Z/a-z, 
+# if unmatched left-half parentheses is found, label it by "$" and  unmatched right-half parentheses by "?" as the following examples
+
+# 	Inputs from keyboard: 
+# Enter an expression like:  ((ABCD(x)
+
+# 	Outputs:
+# 		Unmatched parentheses:  $$
+
+
+# 	Inputs from keyboard: 
+# Enter an expression like:  )(rttyy())sss)(
+
+# 	Outputs:
+# 		Unmatched parentheses: ?                ?$
+
+
 class Stack:
     def __init__(self):
         self.items = []
