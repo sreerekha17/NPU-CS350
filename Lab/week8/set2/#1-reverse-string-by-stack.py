@@ -1,3 +1,8 @@
+# Problem 1: Given a char array with initial value, like string = "reward",
+# write a program to reverse array by stack after calling rev(string), 
+# and return value will be 
+# newString = "drawer"
+
 class Stack:
     def __init__(self):
         self.items = []
