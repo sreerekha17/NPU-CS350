@@ -1,3 +1,10 @@
+
+# Assuming that there is math function f based on stack push operation, 
+# where a series of int type values is saved. If a stack S is empty initially, 
+# then f(S) = 0. After pushing int 1 to this stack, then. 
+# And then push one more int value 2 to it, . Following the same process,
+# after pushing -2, 4, 5 continuously for example, write a program to calculate value
+
 class Stack:
     def __init__(self):
         self.items = []
