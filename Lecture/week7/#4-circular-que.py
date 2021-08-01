@@ -1,3 +1,6 @@
+# 4.   Given a circular queue with max size = M to save each element, after several times enqueue (insert) & dequeue(delete) operations,
+# front & rear have their own values, write a function/method getNumElem(size, front, rear)to find how many elements are in the circular queue 
+
 class CircularQueue:
 
     #Constructor
