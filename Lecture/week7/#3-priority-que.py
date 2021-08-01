@@ -1,3 +1,10 @@
+# 3.   PriorityQueue is a queue with following propertiesa.   
+#  Every item has a priority associated with it.b.  
+#  In pop operation, an element with high priority will be dequeued (deleted) before an element with low priority.c.  
+# If two elements have the same priority, they are served according to their order in the queue.For example, 
+# each element in a given queue is char type and priority of each element is ASCII code value, write functions to complete push and pop operations 
+
+
 from queue import Queue 
 
 class PriorityQue:
