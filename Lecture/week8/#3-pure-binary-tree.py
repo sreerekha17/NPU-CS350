@@ -21,6 +21,7 @@ def height(node):
         else:
             return rheight+1
             
+
 def pruning(root, n):
     if n >= height(root):
         print("Invalid number entered for prune")
@@ -45,33 +46,7 @@ def pruning(root, n):
                     t.left = None
                     t.right = None
             return t
-    pruneIfExists(root, level)     
-
-# def pruning(root, n):
-#     if n >= height(root):
-#         print("Invalid number entered for prune")
-#         return
-#     if n < 1:
-#         print("Level cannot be below 1")
-#     level = 0
-#     def pruneIfExists(t, level):
-#         node = t
-#         while level <= n:
-#             if t is None:
-#                 return
-#             level += 1
-            
-#             left = pruneIfExists(t.left, level)
-#             right = pruneIfExists(t.right, level)
-#             if level >= n:
-#                 if t and t.left or t.right:
-#                     t.left = None
-#                     t.right = None
-#                 if t and t.left or t.right:
-#                     t.left = None
-#                     t.right = None
-#             return t
-#     pruneIfExists(root, level)
+    pruneIfExists(root, level)
 
 
 root = Node(10)
