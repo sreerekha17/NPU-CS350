@@ -42,9 +42,7 @@ def pruning(root, n):
                 if t and t.left or t.right:
                     t.left = None
                     t.right = None
-                if t and t.left or t.right:
-                    t.left = None
-                    t.right = None
+
             return t
     pruneIfExists(root, level)
 
