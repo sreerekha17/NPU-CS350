@@ -1,3 +1,3 @@
-# NPU-CS350
+# Common Interview Problems and solutions in Python
 
 
